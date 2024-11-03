@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+     <activity
+         android:id="@+id/dialPhoneActivity"
+         android:name="com.example.hc_inter.DialPhone.DialPhoneActivity"
+         android:label="activity_dial_phone"
+         tools:layout="@layout/activity_dial_phone" />
+     <activity
+         android:id="@+id/nav_contact"
+         android:name="com.example.hc_inter.Contact.ContactActivity"
+         android:label="activity_contact"
+         tools:layout="@layout/activity_contact">
+          <argument android:name="nav_home" />
+     </activity>
+     <fragment
+         android:id="@+id/nav_home"
+         android:name="com.example.hc_inter.home.HomeFragment"
+         android:label="Home"
+         tools:layout="@layout/fragment_home"
+         >
+
+          <action
+              android:id="@+id/action_nav_home_to_nav_emergency"
+              app:destination="@id/nav_emergency" />
+          <action
+              android:id="@+id/action_nav_home_to_nav_popup"
+              app:destination="@id/nav_popup" />
+          <action
+              android:id="@+id/action_nav_home_to_nav_info"
+              app:destination="@id/nav_info" />
+          <action
+              android:id="@+id/action_nav_home_to_nav_settings"
+              app:destination="@id/nav_settings" />
+          <action
+              android:id="@+id/action_nav_home_to_nav_weather"
+              app:destination="@id/nav_weather" />
+
+          <action
+              android:id="@+id/action_nav_home_to_nav_calendar"
+              app:destination="@id/nav_calendar"/>
+          <action
+              android:id="@+id/action_nav_home_to_dialPhoneActivity"
+              app:destination="@id/dialPhoneActivity" />
+          <action
+              android:id="@+id/action_nav_home_to_nav_contact"
+              app:destination="@id/nav_contact" />
+
+     </fragment>
+
+     <fragment
+         android:id="@+id/nav_emergency"
+         android:name="com.example.hc_inter.Emergency.EmergencyFragment"
+         android:label="Emergency"
+         tools:layout="@layout/fragment_emergency">
+
+          <action
+              android:id="@+id/action_nav_emergency_to_nav_home"
+              app:destination="@id/nav_home" />
+     </fragment>
+
+     <fragment
+         android:id="@+id/nav_popup"
+         android:name="com.example.hc_inter.PopUp.PopUp"
+         android:label="PopUp"
+         tools:layout="@layout/pop_up">
+          <action
+              android:id="@+id/action_nav_popup_to_nav_emergency"
+              app:destination="@id/nav_emergency" />
+     </fragment>
+
+
+     <fragment
+         android:id="@+id/nav_info"
+         android:name="com.example.hc_inter.Information.InformationFragment"
+         android:label="Info"
+         tools:layout="@layout/fragment_info">
+
+          <action
+              android:id="@+id/action_nav_info_to_nav_home"
+              app:destination="@id/nav_home" />
+     </fragment>
+
+     <fragment
+         android:id="@+id/nav_settings"
+         android:name="com.example.hc_inter.Settings.SettingsFragment"
+         android:label="Settings"
+         tools:layout="@layout/fragment_settings">
+          <action
+              android:id="@+id/action_nav_settings_to_nav_home"
+              app:destination="@id/nav_home" />
+     </fragment>
+
+
+     <fragment
+         android:id="@+id/nav_weather"
+         android:name="com.example.hc_inter.Weather.WeatherFragment"
+         android:label="Weather"
+         tools:layout="@layout/fragment_weather">
+
+          <action
+              android:id="@+id/action_nav_weather_to_nav_home"
+              app:destination="@id/nav_home" />
+     </fragment>
+
+     <activity
+         android:id ="@+id/nav_calendar"
+         android:name="com.example.hc_inter.Calendar.CalendarActivity"
+         android:label="Calendar"
+         tools:layout="@layout/activity_calendar">
+     </activity>
+
+     <activity
+         android:id ="@+id/nav_dailyActivity"
+         android:name="com.example.hc_inter.Calendar.DailyActivity"
+         android:label="Calendar"
+         tools:layout="@layout/activity_daily">
+
+     </activity>
+
+     <activity
+         android:id ="@+id/nav_editEventActivity"
+         android:name="com.example.hc_inter.Calendar.EventEditActivity"
+         android:label="Calendar"
+         tools:layout="@layout/activity_event_edit">
+
+
+
+     </activity>
+
+
+</navigation>

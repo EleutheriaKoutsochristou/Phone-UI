@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/inputContactName"
+        android:layout_width="380dp"
+        android:layout_height="61dp"
+        android:textSize="20sp"
+        android:hint="Εισάγετε το όνομα της επαφής" />
+
+    <EditText
+        android:id="@+id/inputContactPhoneNumber"
+        android:layout_width="380dp"
+        android:layout_height="62dp"
+        android:textSize="20sp"
+        android:hint="Εισάγετε τον αριθμό τηλεφώνου"
+        android:inputType="phone" />
+</LinearLayout>
